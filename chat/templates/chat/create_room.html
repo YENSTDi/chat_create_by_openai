@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Create Chat Room</title>
+</head>
+<body>
+    <h1>Create a Chat Room</h1>
+    <form method="post" action="{% url 'create_room' %}">
+        {% csrf_token %}
+        <label for="room_name">Room Name:</label>
+        <input id="room_name" type="text" name="room_name" />
+        <input type="submit" value="Create" />
+    </form>
+</body>
+</html>
